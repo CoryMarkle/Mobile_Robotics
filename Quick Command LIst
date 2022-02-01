@@ -1,0 +1,77 @@
+Gazebo
+export TURTLEBOT3_MODEL=waffle_pi
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
+
+Teleop Node
+export TURTLEBOT3_MODEL=waffle_pi
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+
+Nav node w/ map
+export TURTLEBOT3_MODEL=waffle_pi
+roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml
+
+Nav node w/out map
+
+
+SLAM node
+export TURTLEBOT3_MODEL=waffle_pi
+roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
+
+Nodelist
+rosnode list
+
+FInd Package
+rospack -h
+rospack listd
+
+create directory
+mkdir [directory name]
+
+Graphing nodes
+rqt_graph
+
+Create a package in catkin_ws
+cd catkin_ws
+cd src/
+catkin_create_pkg [package name] roscpp std_msgs
+
+open package .xml
+gedit rj_training/package.xml
+
+open package CMakeList
+gedit rj_training/CMakeLists.txt
+
+Make a catkin package (leave src folder with cd ..)
+catkin_make
+
+
+display message type
+rostopic info /[talker nodename]
+rostopic echo /[talker nodename]
+
+to view parameters in system
+rosparam list
+
+creating package (in catkin_ws src folder)
+catkin_create_pkg [package name] std_msgs rospy roscpp
+
+Source catkin_ws
+cd catkin_ws/
+source devel/setup.bash
+
+Install catkin build
+sudo apt install python3-catkin-tools
+
+
+build package (need to install python3)
+catkin build
+
+check package dependacies
+rospack depends1 [package name]
+
+creater python script
+touch [script name].py
+
+make python script executable (must be in directory)
+chmod +x [scriptname].py
+
