@@ -13,3 +13,10 @@ roslaunch turtlebot3_slam turtlebot3_slam.launch
 Terminal 4
 roslaunch go_home explore.launch
 
+move_base_msgs::MoveBaseGoal goal;
+  goal.target_pose.pose.position.x = 0;
+  goal.target_pose.pose.position.y = 0;
+  goal.target_pose.pose.orientation.w = 1.;
+  goal.target_pose.header.frame_id = costmap_client_.getGlobalFrameID();
+  goal.target_pose.header.stamp = ros::Time::now();
+  move_base_client_.sendGoal(goal);
