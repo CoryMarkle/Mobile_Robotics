@@ -1,3 +1,6 @@
+Camera Operation
+https://emanual.robotis.com/docs/en/platform/turtlebot3/appendix_raspi_cam/
+
 Aruco: 
 https://github.com/pal-robotics/aruco_ros
 http://wiki.ros.org/asr_aruco_marker_recognition#Needed_packages
