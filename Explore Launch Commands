@@ -1,3 +1,7 @@
+
+ssh pi@{IP_ADDRESS_OF_RASPBERRY_PI}
+roslaunch turtlebot3_bringup turtlebot3_robot.launch
+
 Terminal 1
 export TURTLEBOT3_MODEL=waffle_pi
 roslaunch turtlebot3_gazebo turtlebot3_world.launch
