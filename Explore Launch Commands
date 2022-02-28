@@ -15,7 +15,7 @@ export TURTLEBOT3_MODEL=waffle_pi
 roslaunch turtlebot3_slam turtlebot3_slam.launch
 
 Terminal 4
-roslaunch go_home explore.launch
+roslaunch explore_lite explore.launch
 
 move_base_msgs::MoveBaseGoal goal;
   goal.target_pose.pose.position.x = 0;
