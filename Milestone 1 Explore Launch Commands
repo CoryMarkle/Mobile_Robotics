@@ -17,6 +17,9 @@ roslaunch turtlebot3_slam turtlebot3_slam.launch
 Terminal 4
 roslaunch explore_lite explore.launch
 
+Map Save
+rosrun map_server map_saver -f /tmp/my_map
+
 move_base_msgs::MoveBaseGoal goal;
   goal.target_pose.pose.position.x = 0;
   goal.target_pose.pose.position.y = 0;
